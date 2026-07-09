@@ -88,9 +88,18 @@ header p{
 }
 
 #score{
+    display:block;
+    margin:20px auto;
+
+    width:230px;
+    height:35px;
+    line-height:30px;
+
+    background:black;
     color:white;
-    font-size:1.2rem;
-    margin-bottom:15px;
+    border:2px solid white;
+    border-radius:5px;
+    font-size:16px;
 }
 
 .hide{
@@ -156,6 +165,7 @@ header p{
 
     #score{
         font-size:1rem;
+        width: 200px;
     }
 
     .reset,
@@ -181,6 +191,11 @@ header p{
 
     .box{
         font-size:2rem;
+    }
+
+    #score
+    {
+        width:150px;
     }
 
     .reset,
