@@ -24,7 +24,7 @@ const showwinner=(winner)=>
 {  
     disablebtn();
     msg.innerText=`Congratulation player ${winner} won.`;
-    scr.innerText=`X:${x} O:${O}`;
+    scr.innerText=`SCORE: X:${x}    O:${O}`;
     msgcontainer.classList.remove("hide");
     
 
@@ -35,10 +35,8 @@ const reset=()=>
 {
     turnO=true;
     enablebtn();
-    x=0;
-    O=0;
+    scr.innerText=`SCORE:X:${0}    O:${0}`;
     msgcontainer.classList.add("hide");
-
 };
 
 const disablebtn=()=>
@@ -105,5 +103,20 @@ boxes.forEach((box) => {
         checkwinner();
     });
 });
-nbtn.addEventListener("click",reset);
+
+
+const newGame = () => {
+    turnO = true;
+    enablebtn();
+    msgcontainer.classList.add("hide");
+};
+
+
+window.addEventListener("load",()=>
+{
+    reset();
+})
+
+nbtn.addEventListener("click",newGame);
 btn.addEventListener("click",reset);
+
